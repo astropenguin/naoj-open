@@ -1,0 +1,34 @@
+#!/bin/bash
+
+SSID="naoj-open"
+NTRY=5
+
+# show usage (if no key input)
+if [ "$1" = "" ]; then
+echo "usage: naoj-open xxxx-yyyy-zzzz"
+exit 0
+fi
+
+# remove naoj-open (if already exists)
+if networksetup -listpreferredwirelessnetworks en0 | grep -sq $SSID; then
+    echo "SSID \"naoj-open\" is already in the preferred networks"
+    echo "Removing naoj-open from the preferred networks ..."
+    sudo networksetup -removepreferredwirelessnetwork en0 $SSID
+fi
+
+# try to connect naoj-open
+for i in `seq 1 $NTRY`
+do
+    echo "Connecting naoj-open with the input weekly key ... ($i)"
+    sudo networksetup -setairportnetwork en0 $SSID $1
+
+    # if connected within trials
+    if networksetup -getairportnetwork en0 | grep -sq $SSID; then
+        echo "Connected naoj-open successfully!"
+        exit 0
+    fi
+done
+
+# if trials failed
+echo "Could not connect naoj-open !"
+exit 0
