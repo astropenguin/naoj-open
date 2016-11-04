@@ -9,6 +9,11 @@ echo "usage: naoj-open xxxx-yyyy-zzzz"
 exit 0
 fi
 
+# turn on Wi-Fi
+if networksetup -getairportpower en0 | grep -sq Off; then
+    networksetup -setairportpower en0 On
+fi
+
 # remove naoj-open (if already exists)
 if networksetup -listpreferredwirelessnetworks en0 | grep -sq $SSID; then
     echo "SSID \"naoj-open\" is already in the preferred networks"
