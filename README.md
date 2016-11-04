@@ -1,6 +1,6 @@
-# macos-naoj-open
+# naoj-open
 
-A mini tool to connect naoj-open with the weekly key.
+A mini tool for macOS to connect naoj-open with the weekly key.
 
 ## Usage
 
@@ -9,7 +9,7 @@ A mini tool to connect naoj-open with the weekly key.
 The tool tries to remove naoj-open if it is already in the preferred networks
 and then connect naoj-open (trial is repeated 5 times).
 You may be asked to enter your account's password
-to allow the tool to use `networksetup` command within the tool.
+to allow the tool to use `networksetup` (macOS builtin command).
 
 ## Installation
 
@@ -17,7 +17,7 @@ to allow the tool to use `networksetup` command within the tool.
 
 ```bash
 brew tap snoopython/macos
-brew install macos-naoj-open
+brew install naoj-open
 
 ```
 
@@ -27,4 +27,4 @@ You can also download a ZIP and use bin/naoj-open as you like!
 
 ## Requirements
 
-macos-naoj-open requires mac OS or OS X with Xcode or Command Line Tools installed.
+naoj-open requires mac OS or OS X with Xcode or Command Line Tools installed.
