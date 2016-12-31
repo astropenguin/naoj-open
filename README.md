@@ -16,14 +16,14 @@ to allow the tool to use `networksetup` (macOS builtin command).
 ### Homebrew
 
 ```bash
-brew tap snoopython/macos
+brew tap snoopython/formulae
 brew install naoj-open
 
 ```
 
 ### Download ZIP
 
-You can also download a ZIP and use bin/naoj-open as you like! 
+You can also download a ZIP and use bin/naoj-open as you like!
 
 ## Requirements
 
