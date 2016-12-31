@@ -1,6 +1,6 @@
 # naoj-open
 
-A mini tool for macOS to connect naoj-open with the weekly key.
+Mini tool for macOS to connect naoj-open with the weekly key.
 
 ## Usage
 
